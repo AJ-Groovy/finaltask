@@ -1,0 +1,85 @@
+@import url('reset.css');
+@import url('general.css');
+/* ITEM CSS */
+
+/* ITEM FLEX CONTAINERS */
+
+.gallery_section, .thumbnails, .product_item_info, .options_item, .available_options, .product_description {
+    display: flex;
+}
+
+/* ITEM LAYOUT */
+
+.gallery_section {
+    flex: 1;
+    flex-basis: 50%;
+    flex-direction: column;
+}
+
+.product_description {
+    flex: 1;
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    padding-left: 50px;
+}
+
+.form_button {
+    align-self: center;
+}
+
+.product_item_info {
+    margin-bottom: 160px;
+}
+
+.secondary_banner {
+    flex: 1;
+}
+
+.secondary_banner:nth-child(1) {
+    flex: 2;
+}
+
+.product_title{
+    font-family: 'roboto', sans-serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.product_description .description {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.product_description .price {
+    font-family: 'roboto', sans-serif;
+    font-weight: normal;
+    font-size: 25px;;
+}
+
+.options_section input[type="radio"]{
+    display: none;
+}
+
+.options_section  label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input_emitter {
+    font-family: 'onensans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 12px 0;
+    min-width: 80px;
+    border: none;
+    background-color: transparent;
+}
+
+.input_emitter.selected {
+    border: 1px solid #e5e5e5;
+}

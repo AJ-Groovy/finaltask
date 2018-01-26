@@ -1,0 +1,140 @@
+@import url('reset.css');
+@import url('general.css');
+/* CATALOG CSS */
+
+/* CATALOG FLEX CONTAINERS */
+
+.filters_section, .catalog_items, .filter_item_container {
+    display: flex;
+}
+
+/* CATALOG LAYOUT */
+
+.filters_section {
+    margin-bottom: 55px;
+}
+
+.filter_item_container {
+    flex: 1;
+    flex-direction: column;
+}
+
+.discount_info {
+    margin-bottom: 100px;
+}
+
+.catalog_items {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.secondary_banner {
+    flex: 1;
+}
+
+.secondary_banner:nth-child(1) {
+    flex: 2;
+}
+
+.product_item {
+    margin-bottom: 85px;
+}
+
+/* FONTS */
+
+.old_price, .discount {
+    color: #757575;
+}
+
+.discount {
+    font-style: italic;
+}
+
+
+
+/* CATALOG STYLES */
+
+.filter_type {
+    font-family: 'opensans', sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.filter_type, .selected_filter {
+    padding-left: 20px;
+}
+
+.filters_list button {
+    text-align: left;
+    padding: 8px 0 8px 20px; 
+}
+
+
+.filter_item_container.has_filter .filter_type {
+    font-family: 'roboto', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.filter_item_container.has_filter,
+.filter_item_container.has_filter .filter_type,
+.filters_list button:hover {
+    background-color: #f7f7f7;
+}
+
+.filters_section button {
+    background-color: #fff;
+    border: none;
+}
+
+.filters_section button:hover{
+    color: #f14a58;
+}
+
+.filter_item_container {
+    position: relative;
+    justify-content: center;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    height: 33px;
+    min-height: 33px;
+    padding: 12px 0;
+}
+
+.filter_item_container:nth-child(n+2) {
+    border-left: none;
+}
+
+.filters_list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    border-top: none;
+    border: 1px solid #e5e5e5;
+}
+
+.filter_item_container:hover .filters_list {
+    display: block;
+}
+
+.filter_option {
+    width: 100%;
+}
+
+.section_header span {
+    color: #f14a57;
+}
+
+.discount_info .section_header {
+    margin-bottom: 30px;
+}
+
+.discount_info .description {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+}

@@ -1,0 +1,64 @@
+@import url('reset.css');
+@import url('general.css');
+/* ITEM CSS */
+
+/* ITEM FLEX CONTAINERS */
+
+.cart_items_section, .cart_item, .controls, .total {
+    display: flex;
+}
+
+/* ITEM LAYOUT */
+
+.section_header {
+    text-align: left;
+}
+
+.cart_items_section {
+    flex-wrap: wrap;
+}
+
+.cart_item {
+    flex-basis: 50%;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+.item_description  div, .item_title {
+    margin-bottom: 15px;
+}
+
+.item_description  .item_price, .item_description .quantity {
+    margin-bottom: 35px;
+}
+
+
+.message {
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 10px 0;
+    margin-bottom: 25px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.controls {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+}
+
+.clear_cart {
+    border: none;
+    background-color: transparent;
+}
+
+.total {
+    flex-direction: column;
+    font-family: 'roboto', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.total span {
+    font-family: 'opensans', sans-serif;
+    font-size: 18px;
+}

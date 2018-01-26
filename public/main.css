@@ -1,0 +1,82 @@
+@import url('reset.css');
+@import url('general.css');
+/* MAIN CSS */
+
+/* MAIN FLEX CONTAINERS */
+
+.slide_switch, .new_arrivals {
+    display: flex;
+}
+
+/* MAIN LAYOUT*/
+
+.main_banner_section {
+    position: relative;
+}
+
+.slide_switch {
+    justify-content: center;
+    padding: 35px 0;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+}
+
+.next {
+    right: 0;
+}
+
+.secondary_banners_section {
+    margin-bottom: 150px;
+}
+
+.new_arrivals {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* MAIN STYLES */
+
+.slide_item {
+    display: none;
+    position: relative;
+    z-index: -1;
+}
+
+.slide_item img, .secondary_banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.active_slide {
+    display: block;
+}
+
+.slide_controls {
+    background-color: #f7f7f7;
+    border-top: 1px solid #e5e5e5;
+    margin-top: -75px;
+}
+
+.secondary_banner {
+    overflow: hidden;
+    border: 1px solid #e5e5e5;  
+}
+
+.secondary_banner:first-child{
+    border-left: none;
+}
+
+.secondary_banner:last-child{
+    border-right: none;
+    border-left: none;
+}
+
+.new_arrivals .section_header {
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+/*  */
