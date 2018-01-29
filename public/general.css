@@ -109,6 +109,7 @@ html, body {
 
 .secondary_nav {
     flex-basis: 50%;
+    flex: 1;
 }
 
 .contacts {
@@ -371,3 +372,4 @@ a {
     position: absolute;
     right: -75%;
 }
+

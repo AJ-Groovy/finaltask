@@ -25,6 +25,8 @@
 
 .discount_info {
     margin-bottom: 100px;
+    width: 100%;
+    text-align: center;
 }
 
 .catalog_items {
@@ -145,4 +147,14 @@
     font-style: italic;
     font-weight: normal;
     font-size: 16px;
+}
+
+.filter_item_container.has_filter .selected_filter {
+    color: #f14a58;
+}
+
+.filters_list .filter_option {
+    font-family: 'opensans', sans-serif;
+    font-weight: bold;
+
 }

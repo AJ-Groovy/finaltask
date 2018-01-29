@@ -82,4 +82,33 @@
     margin-bottom: 100px;
 }
 
-/*  */
+.switch_item {
+    border-radius: 50%;
+    border: none;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    margin: 0 10px;
+    background-color: transparent;
+}
+
+.switch_item:hover {
+    cursor: pointer;
+}
+
+.switch_item:before {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 50%;
+    top: 50%;
+    margin-left: -3px;
+    margin-top: -3px;
+    background-color: #e5e5e5;
+}
+
+.switch_item.active:before{
+    background-color: #f14a58;
+}

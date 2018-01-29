@@ -71,22 +71,22 @@
         </header>
         <main class="main">
             <section class="main_banner_section ">
-                <div class="slide_item active_slide">
+                <div data-index="0" class="slide_item active_slide">
                     <img src="../img/banner/1.jpg" alt="">
                 </div>
-                <div class="slide_item">
+                <div data-index="1" class="slide_item">
                     <img src="../img/banner/2.jpg" alt="">
                 </div>
-                <div class="slide_item">
+                <div data-index="2" class="slide_item">
                     <img src="../img/banner/3.jpg" alt="">
                 </div>
                 <div class="slide_controls">
                     <button class="prev">Prev</button>
                     <button class="next">Next</button>
                     <div class="slide_switch">
-                        <button class="switch_item">1</button>
-                        <button class="switch_item">2</button>
-                        <button class="switch_item">3</button>
+                        <button data-index="0" class="switch_item active"></button>
+                        <button data-index="1"class="switch_item"></button>
+                        <button data-index="2"class="switch_item"></button>
                     </div>
                 </div>
             </section>
@@ -221,6 +221,7 @@
             </section>
         </footer>
     </div>
+    <script src="js/carousel.js"></script>
 </body>
 
 </html>
