@@ -1,4 +1,5 @@
 'use strict';
+
 var productInfo = document.querySelector('.product_description');
 productInfo.addEventListener('click', function (e) {
     e.preventDefault();

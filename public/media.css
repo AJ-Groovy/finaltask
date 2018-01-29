@@ -37,14 +37,16 @@
     .search input {
         position: relative;
         transform: translateX(150%);
+        opacity: 0;
+        transition: all 1s ease-in-out; 
     }
     .all_arrivals .product_item:nth-child(4) {
         display: none;
     }
-
-    .search.expanded:hover input {
+    
+    .search.expanded input {
         transform: translateX(0);
-        transition: transform 1s ease;
+        opacity: 1;
     }
 
 }
