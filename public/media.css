@@ -41,6 +41,12 @@
     .all_arrivals .product_item:nth-child(4) {
         display: none;
     }
+
+    .search.expanded:hover input {
+        transform: translateX(0);
+        transition: transform 1s ease;
+    }
+
 }
 
 @media screen and (max-width: 850px) {

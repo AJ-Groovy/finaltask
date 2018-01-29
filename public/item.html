@@ -15,7 +15,7 @@
     <div class="wrapper">
         <header class="header">
             <div class="logo_section">
-                <a href="/">
+                <a href="index.html">
                     <h1 class="logo">Template</h1>
                     <h1 class="mobile_logo">TL</h1>
                 </a>
@@ -71,7 +71,7 @@
         </header>
         <main class="main">
             <div class="page_header">
-                <a href="/">
+                <a href="catalog.html">
                     < Back to catalog</a>
             </div>
             <section class="product_item_info">
@@ -96,10 +96,10 @@
                         <h2 class="product_title">Dark classic fit suit</h2>
                         <p class="description">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs</p>
                     </div>
-                    <div class="price">180.60</div>
+                    <div class="price">£180.60</div>
                     <div class="options_section">
                         <form name="add_to_cart" action="/" method="post">
-                            <label for=""> Size:
+                            <label data-category="size" for=""> Size:
                                 <button class="input_emitter selected">UK 52</button>
                                 <input name="size" value="uk52" type="radio">
                                 <button class="input_emitter">UK 54</button>
@@ -107,7 +107,7 @@
                                 <button class="input_emitter">UK 56</button>
                                 <input name="size" value="uk56" type="radio">
                             </label>
-                            <label for=""> Color:
+                            <label data-category="color" for=""> Color:
                                 <button class="input_emitter">Black</button>
                                 <input name="color" value="black" type="radio">
                                 <button class="input_emitter selected">Blue</button>
@@ -130,7 +130,7 @@
                     <img src="../img/banners/jeans.jpg" alt="Jeans">
                     <div class="banner_text">
                         <h3 class="banner_title">Repair patches</h3>
-                        <span class="banner_description">150.50</span>
+                        <span class="banner_description">£150.50</span>
                     </div>
                 </div>
                 <div class="secondary_banner centered_text accent_header">
@@ -222,6 +222,8 @@
             </section>
         </footer>
     </div>
+    <script src="js/catalog.js"></script>
+    <script src="js/catalogData.js"></script>
 </body>
 
 </html>

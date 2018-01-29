@@ -77,6 +77,7 @@ carousel.carouselStart();
 var nextButton = document.querySelector('.next');
 var prevButton = document.querySelector('.prev');
 var switcher = document.querySelector('.slide_switch');
+
 nextButton.addEventListener('click', carousel.nextSlide);
 prevButton.addEventListener('click', carousel.prevSlide);
 
@@ -87,4 +88,5 @@ switcher.addEventListener('click', function (e) {
         item.classList.add('active');
         carousel.setSlide(item.dataset.index);
     };
-})
+});
+

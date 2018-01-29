@@ -15,7 +15,7 @@
     <div class="wrapper">
         <header class="header">
             <div class="logo_section">
-                <a href="/">
+                <a href="index.html">
                     <h1 class="logo">Template</h1>
                     <h1 class="mobile_logo">TL</h1>
                 </a>
@@ -62,8 +62,8 @@
                     </form>
                 </div>
             </nav>
-            <div class="search">
-                <form action="/" name="search" method="get">
+            <div class="search expanded">
+                <form name="search" method="get">
                     <input name="search_value" type="text" placeholder="Style Name">
                     <button class="search_icon"></button>
                 </form>
@@ -71,40 +71,49 @@
         </header>
         <main class="main">
             <section class="main_banner_section ">
-                <div data-index="0" class="slide_item active_slide">
-                    <img src="../img/banner/1.jpg" alt="">
-                </div>
-                <div data-index="1" class="slide_item">
-                    <img src="../img/banner/2.jpg" alt="">
-                </div>
-                <div data-index="2" class="slide_item">
-                    <img src="../img/banner/3.jpg" alt="">
-                </div>
+                <a href="catalog.html">
+                    <div data-index="0" class="slide_item active_slide">
+                        <img src="../img/banner/1.jpg" alt="">
+                    </div>
+                </a>
+                <a href="item.html">
+                    <div data-index="1" class="slide_item">
+                        <img src="../img/banner/2.jpg" alt="">
+                    </div>
+                </a>
+                <a href="catalog.html">
+                    <div data-index="2" class="slide_item">
+                        <img src="../img/banner/3.jpg" alt="">
+                    </div>
+                </a>
                 <div class="slide_controls">
                     <button class="prev">Prev</button>
                     <button class="next">Next</button>
                     <div class="slide_switch">
                         <button data-index="0" class="switch_item active"></button>
-                        <button data-index="1"class="switch_item"></button>
-                        <button data-index="2"class="switch_item"></button>
+                        <button data-index="1" class="switch_item"></button>
+                        <button data-index="2" class="switch_item"></button>
                     </div>
                 </div>
             </section>
             <section class="secondary_banners_section ">
                 <div class="secondary_banner">
-                    <img src="../img/banners/nike.jpg" alt="Nike">
-                    <div class="banner_text">
-                        <h3 class="banner_title">Nike Red</h3>
-                        <span class="banner_description">New</span>
-                    </div>
-
+                    <a href="item.html">
+                        <img src="../img/banners/nike.jpg" alt="Nike">
+                        <div class="banner_text">
+                            <h3 class="banner_title">Nike Red</h3>
+                            <span class="banner_description">New</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="secondary_banner full_width_slide">
-                    <img src="../img/banners/hats.jpg" alt="Sale">
-                    <div class="banner_text">
-                        <h3 class="banner_title">Caps & Hats</h3>
-                        <span class="banner_description">Sale -50%</span>
-                    </div>
+                    <a href="catalog.html">
+                        <img src="../img/banners/hats.jpg" alt="Sale">
+                        <div class="banner_text">
+                            <h3 class="banner_title">Caps & Hats</h3>
+                            <span class="banner_description">Sale -50%</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="secondary_banner device_slide centered_text accent_header">
                     <img src="../img/banners/sale.jpg" class="" alt="Sale">
@@ -120,22 +129,22 @@
                     <div class="product_item">
                         <img src="../img/products/1.jpg" alt="">
                         <p class="product_title">Only Skinny Jeans</p>
-                        <p class="product_price">65.50</p>
+                        <p class="product_price">£65.50</p>
                     </div>
                     <div class="product_item">
                         <img src="../img/products/2.jpg" alt="">
                         <p class="product_title">Neck Knitted Jumper</p>
-                        <p class="product_price">76.25</p>
+                        <p class="product_price">£76.25</p>
                     </div>
                     <div class="product_item tagged_new">
                         <img src="../img/products/3.jpg" alt="">
                         <p class="product_title">Turtle Neck Jumper in Rib</p>
-                        <p class="product_price">130.25</p>
+                        <p class="product_price">£130.25</p>
                     </div>
                     <div class="product_item">
                         <img src="../img/products/4.jpg" alt="">
                         <p class="product_title">Witch Patchwork Crochet</p>
-                        <p class="product_price">80.60</p>
+                        <p class="product_price">£80.60</p>
                     </div>
                 </div>
                 <button class="btn">All arrivals</button>
@@ -222,6 +231,7 @@
         </footer>
     </div>
     <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
