@@ -10,6 +10,10 @@
 
 /* CATALOG LAYOUT */
 
+.mobile_filters {
+    display: none
+}
+
 .filters_section {
     margin-bottom: 55px;
 }
@@ -54,6 +58,10 @@
 
 
 /* CATALOG STYLES */
+
+.mobile_filters .active {
+    color: #f14a57;
+}
 
 .filter_type {
     font-family: 'opensans', sans-serif;

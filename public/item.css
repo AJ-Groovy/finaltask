@@ -26,6 +26,12 @@
     padding-left: 50px;
 }
 
+
+.thumb_container {
+    flex: 1;        
+}
+
+
 .form_button {
     align-self: center;
 }

@@ -18,6 +18,15 @@
     flex-wrap: wrap;
 }
 
+.item_image {
+    flex: 1;
+}
+
+.item_description {
+    flex: 2;
+    padding-left: 20px;
+}
+
 .cart_item {
     flex-basis: 50%;
     align-items: flex-start;

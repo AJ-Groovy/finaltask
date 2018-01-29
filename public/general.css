@@ -4,6 +4,8 @@ html, body {
     height: 100%;
 }
 
+
+
 /* GENERAL FLEX CONTAINERS */
 
 .wrapper, .header, .commercial_section, .main_nav_links_container, .search, .copyrights_section, .product_section, .footer, .secondary_nav, .contacts, .secondary_banners_section {
@@ -22,6 +24,7 @@ html, body {
 
 .header {
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 15px;
     flex-shrink: 0;
@@ -50,7 +53,12 @@ html, body {
 
 .search {
     flex-basis: 20%;
+    max-width: 115px;
     justify-content: flex-end;
+}
+
+.search form, .search input {
+    width: 100%;
 }
 
 .main_nav_links_container {
@@ -93,6 +101,10 @@ html, body {
 .footer {
     flex-wrap: wrap;
     flex-shrink: 0;
+}
+
+.mobile_social, .mobile_hamburger, .mobile_logo, .mobile_search {
+    display: none;
 }
 
 .secondary_nav {
@@ -285,21 +297,25 @@ body {
 .search input {
     border: 0;
     padding-bottom: 5px;
+    border-bottom: 1px solid #e5e5e5;
     outline: none;
 }
 
 .search form {
-    border-bottom: 1px solid #e5e5e5;
+    position: relative;
 }
 
 .search_icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    border: none;
     background-image: url('../img/icons/search.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 15px;
-    height: 15px;
     background-color: transparent;
-    border: none;
 }
 
 .questions span {
@@ -347,10 +363,11 @@ a {
 
 .tagged_new .product_price {
     position: relative;
+    display: inline;
 }
 
 .tagged_new .product_price:before {
     content: 'New';
     position: absolute;
-    right: 65px;
+    right: -75%;
 }

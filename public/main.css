@@ -65,12 +65,15 @@
     border: 1px solid #e5e5e5;  
 }
 
+.device_slide {
+    display: none;
+}
+
 .secondary_banner:first-child{
     border-left: none;
 }
 
-.secondary_banner:last-child{
-    border-right: none;
+.secondary_banner:nth-child(n+2){
     border-left: none;
 }
 
