@@ -120,7 +120,6 @@
     border-top: none;
     border: 1px solid #e5e5e5;
     z-index: 100;
-
 }
 
 .filter_item_container:hover .filters_list {
@@ -153,4 +152,16 @@
 .filters_list .filter_option {
     font-family: 'opensans', sans-serif;
     font-weight: bold;
+}
+
+.banner_text {
+    color: #fff;
+}
+
+.secondary_banner .banner_description {
+    color: #fff;
+}
+
+.secondary_banner:nth-child(3) .banner_description {
+    color: #757575;
 }

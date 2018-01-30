@@ -22,3 +22,9 @@ filters.addEventListener('click', function (e) {
         activeFilter.innerHTML = '';
     }
 });
+
+var mobFilter = document.querySelector('.mobile_filters');
+
+mobFilter.addEventListener('click', function(e){
+    mobFilter.classList.toggle('active');
+})

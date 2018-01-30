@@ -98,3 +98,14 @@
 .input_emitter.selected {
     border: 1px solid #e5e5e5;
 }
+
+.banner_text {
+    color: #fff;
+}
+.secondary_banner .banner_description {
+    color: #fff;
+}
+
+.secondary_banner:nth-child(3) .banner_description {
+    color: #757575;
+}

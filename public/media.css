@@ -161,11 +161,14 @@
     }
     /* FILTERS TABLET */
     .filters_section {
-        display: flex;
+        position: absolute;
         z-index: 100;
         flex-wrap: wrap;
         margin: 0;
         background-color: #fff;
+    }
+    .mobile_filters.active + .filters_section{
+        display: flex;
     }
     .filters_section * {
         border: none;
@@ -200,6 +203,27 @@
     }
     .filters_list li {
         list-style-type: disc;
+    }
+    .mobile_filters {
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .mobile_filters button {
+        border: none;
+        position: absolute;
+        right: 5px;
+        z-index: 100;
+        background: transparent;
+    }
+    .mobile_filters::after {
+        content: '';
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+        height: 100%;
     }
 }
 
@@ -388,11 +412,7 @@
     }
     .filter_item_container {
         flex-basis: 50%;
+        flex: 1 0 50%;
+        min-width: 50%;
     }
-
-    .mobile_hamburger {
-
-    }
-}
-
 }
