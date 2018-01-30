@@ -4,7 +4,7 @@
 
 /* ITEM FLEX CONTAINERS */
 
-.cart_items_section, .cart_item, .controls, .total {
+.cart_items_section, .cart_item, .controls, .total, .quantity {
     display: flex;
 }
 
@@ -31,6 +31,7 @@
     flex-basis: 50%;
     align-items: flex-start;
     margin-bottom: 100px;
+    position: relative;
 }
 .item_description  div, .item_title {
     margin-bottom: 15px;
@@ -39,7 +40,9 @@
 .item_description  .item_price, .item_description .quantity {
     margin-bottom: 35px;
 }
-
+.quantity {
+    align-items: center;
+}
 
 .message {
     text-align: center;
@@ -70,4 +73,23 @@
 .total span {
     font-family: 'opensans', sans-serif;
     font-size: 18px;
+}
+
+.quantity button, .remove {
+    color: #f14a58;
+    border: none;
+    background: transparent;
+}
+
+.quantity button {
+    font-size: 18px;
+}
+
+.remove {
+    font-family: 'opensans', sans-serif;
+    font-size: 13px;
+}
+
+.accent {
+    color: #f14a58;
 }

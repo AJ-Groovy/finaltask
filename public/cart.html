@@ -15,7 +15,7 @@
     <div class="wrapper">
         <header class="header">
             <div class="logo_section">
-                    <a href="index.html">
+                <a href="index.html">
                     <h1 class="logo">Template</h1>
                     <h1 class="mobile_logo">TL</h1>
                 </a>
@@ -24,7 +24,10 @@
                 <a class="sign_up" href="/">E-mail sign up</a>
                 <div class="cart">
                     <span>Bag</span>
-                    <span class="value">(0)</span>
+                    <span class="price"></span>
+                    (
+                    <span class="value">0</span>
+                    )
                 </div>
             </div>
             <button class="mobile_hamburger"></button>
@@ -75,7 +78,7 @@
             </div>
             <section class="cart_items_section">
                 <div class="cart_item">
-                    <div class="item_image">
+                    <div class="image_container">
                         <img src="../img/products/1.jpg" alt="">
                     </div>
                     <div class="item_description">
@@ -97,7 +100,7 @@
                     </div>
                 </div>
                 <div class="cart_item">
-                    <div class="item_image">
+                    <div class="image_container">
                         <img src="../img/products/10.jpg" alt="">
                     </div>
                     <div class="item_description">
@@ -119,7 +122,7 @@
                     </div>
                 </div>
                 <div class="cart_item">
-                    <div class="item_image">
+                    <div class="image_container">
                         <img src="../img/products/6.jpg" alt="">
                     </div>
                     <div class="item_description">
@@ -141,7 +144,7 @@
                     </div>
                 </div>
                 <div class="cart_item">
-                    <div class="item_image">
+                    <div class="image_container">
                         <img src="../img/products/2.jpg" alt="">
                     </div>
                     <div class="item_description">
@@ -163,7 +166,8 @@
                     </div>
                 </div>
             </section>
-            <p class="message">You've qualified for Free UK Next Day Delivery on your order. Don't forget to enter the code nexday at checkout</p>
+            <p class="message">You've qualified for Free UK Next Day Delivery on your order. Don't forget to enter the code
+                <span class="accent">nexday</span> at checkout</p>
             <div class="controls">
                 <button class="clear_cart">Empty bag</button>
                 <button class="btn">Buy now</button>
@@ -252,6 +256,8 @@
             </section>
         </footer>
     </div>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>

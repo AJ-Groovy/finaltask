@@ -4,7 +4,9 @@ html, body {
     height: 100%;
 }
 
-
+button:hover {
+    cursor: pointer;
+}
 
 /* GENERAL FLEX CONTAINERS */
 
@@ -252,10 +254,10 @@ body {
 
 .btn {
     font-family: 'opensans';
-    padding: 25px 100px;
+    padding: 25px 70px;
     font-size: 24px;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid #e5e5e5;
 }
 
 .btn:hover {
@@ -382,7 +384,7 @@ a:hover {
     position: relative;
 }
 
-.product_item:hover .image_container:before  {
+.product_item:hover .image_container:before, .cart_item:hover .image_container:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -391,7 +393,7 @@ a:hover {
     cursor: pointer;
 }
 
-.product_item:hover .image_container:after {
+.product_item:hover .image_container:after, .cart_item:hover .image_container:after {
     content: 'View item';
     font-size: 22px;
     position: absolute;
@@ -402,7 +404,7 @@ a:hover {
     text-align: center;
 }
 
-.product_item:hover .product_title {
+.product_item:hover .product_title, .cart_item:hover .item_title{
     color: #f14a58;
     cursor: pointer;
 }

@@ -57,8 +57,6 @@
     font-style: italic;
 }
 
-
-
 /* CATALOG STYLES */
 
 .mobile_filters .active {
@@ -77,9 +75,8 @@
 
 .filters_list button {
     text-align: left;
-    padding: 8px 0 8px 20px; 
+    padding: 8px 0 8px 20px;
 }
-
 
 .filter_item_container.has_filter .filter_type {
     font-family: 'roboto', sans-serif;
@@ -87,9 +84,7 @@
     font-size: 12px;
 }
 
-.filter_item_container.has_filter,
-.filter_item_container.has_filter .filter_type,
-.filters_list button:hover {
+.filter_item_container.has_filter, .filter_item_container.has_filter .filter_type, .filters_list button:hover {
     background-color: #f7f7f7;
 }
 
@@ -98,7 +93,7 @@
     border: none;
 }
 
-.filters_section button:hover{
+.filters_section button:hover {
     color: #f14a58;
 }
 
@@ -125,6 +120,7 @@
     border-top: none;
     border: 1px solid #e5e5e5;
     z-index: 100;
+
 }
 
 .filter_item_container:hover .filters_list {
@@ -157,5 +153,4 @@
 .filters_list .filter_option {
     font-family: 'opensans', sans-serif;
     font-weight: bold;
-
 }

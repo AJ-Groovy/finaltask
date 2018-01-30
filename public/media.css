@@ -38,17 +38,15 @@
         position: relative;
         transform: translateX(150%);
         opacity: 0;
-        transition: all 1s ease-in-out; 
+        transition: all 1s ease-in-out;
     }
     .all_arrivals .product_item:nth-child(4) {
         display: none;
     }
-    
     .search.expanded input {
         transform: translateX(0);
         opacity: 1;
     }
-
 }
 
 @media screen and (max-width: 850px) {
@@ -57,6 +55,7 @@
     }
     .gallery_section {
         flex-direction: row;
+        max-height: 400px;
     }
     .thumbnails {
         flex-direction: column;
@@ -83,7 +82,7 @@
         margin-bottom: 25px;
     }
     .logo_section {
-        flex-basis: 70%;
+        flex-basis: 60%;
     }
     .commercial_section {
         flex-basis: 30%;
@@ -157,7 +156,7 @@
     .cart_item img {
         width: 100%;
     }
-    .item_image {
+    .cart_item .image_container {
         flex: 2;
     }
     /* FILTERS TABLET */
@@ -181,7 +180,7 @@
         width: auto;
     }
     .filters_list button {
-        padding: 8px 0 8px; 
+        padding: 8px 0 8px;
     }
     .selected_filter {
         display: none;
@@ -190,7 +189,7 @@
         display: block;
         margin-left: 15px;
     }
-    .filter_type{
+    .filter_type {
         padding: 0;
     }
     .filter_item_container.has_filter, .filter_item_container.has_filter .filter_type {
@@ -238,12 +237,16 @@
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    .logo_section {
+        flex-basis: 50%;
+    }
     .commercial_section {
-        flex-basis: 20%;
+        flex-basis: 40%;
     }
     .mobile_hamburger {
         display: block;
         flex-basis: 10%;
+        flex: 1 0 auto;
         background-image: url('../img/icons/menu.svg');
         background-repeat: no-repeat;
         background-color: #fff;
@@ -353,14 +356,10 @@
         flex-direction: row;
     }
     .cart_item {
-        flex-basis: initial;
+        flex-basis: 100%;
     }
     .product_description .headers {
         max-width: 100%;
-    }
-    
-    .item_image img {
-        width: auto;
     }
     .main_nav_section.active {
         display: flex;
@@ -385,10 +384,14 @@
     }
     .message {
         margin: 0 -20px 25px;
+        padding: 10px;
     }
-
     .filter_item_container {
         flex-basis: 50%;
+    }
+
+    .mobile_hamburger {
+
     }
 }
 
