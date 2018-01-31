@@ -299,7 +299,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url('../img/icons/bag.png');
+    background-image: url('../../img/icons/bag.png');
     background-repeat: no-repeat;
 }
 
@@ -321,7 +321,7 @@ body {
     width: 15px;
     height: 15px;
     border: none;
-    background-image: url('../img/icons/search.svg');
+    background-image: url('../../img/icons/search.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: transparent;
@@ -341,7 +341,7 @@ body {
     background-size: cover;
     width: 20px;
     height: 14px;
-    background-image: url('../img/icons/twi_grey.svg');
+    background-image: url('../../img/icons/twi_grey.svg');
 }
 
 .fb, .twitter {
@@ -352,12 +352,12 @@ body {
 }
 
 .fb {
-    background-image: url('../img/icons/fb.svg');
+    background-image: url('../../img/icons/fb.svg');
     width: 15px;
 }
 
 .twitter {
-    background-image: url('../img/icons/twi.svg');
+    background-image: url('../../img/icons/twi.svg');
     background-size: cover;
     width: 20px;
 }
