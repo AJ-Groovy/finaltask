@@ -36,7 +36,7 @@ function bagInit() {
 
     function addItem(index) {
         currentState.items[index].quantity++;
-        currentState.totalValue;
+        currentState.totalValue = countTotalValue();
         return currentState;
     };
 
