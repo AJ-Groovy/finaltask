@@ -80,3 +80,9 @@ var bag = bagInit();
 //     }
 // });
 
+bag.updateState('REMOVE_ITEM', 0);
+bag.updateState('REMOVE_ITEM', 1);
+bag.updateState('REMOVE_ITEM', 2);
+bag.updateState('REMOVE_ITEM', 3);
+console.log(bag.currentState); // {items: Array(4), totalValue: 0}
+console.log(bag.total); // 251.5
