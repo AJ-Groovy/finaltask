@@ -58,24 +58,25 @@ function bagInit() {
 
     return {
         currentState: currentState,
-        updateState: updateState
+        updateState: updateState,
+        total : currentState.totalValue
     };
 };
 
 var bag = bagInit();
 
 
-// LISTENERS
+// // LISTENERS
 
-var headerTotal = document.querySelector('.price');
-var footerTotal = document.querySelector('.total span');
-var container = document.querySelector('.cart_items_section');
+// var headerTotal = document.querySelector('.price');
+// var footerTotal = document.querySelector('.total span');
+// var container = document.querySelector('.cart_items_section');
 
-container.addEventListener('click', function (e) {
-    var item = e.target;
+// container.addEventListener('click', function (e) {
+//     var item = e.target;
 
-    if (item.tagName.toLowerCase() == 'button' && item.innerHTML == '+') {
+//     if (item.tagName.toLowerCase() == 'button' && item.innerHTML == '+') {
         
-    }
-});
+//     }
+// });
 
