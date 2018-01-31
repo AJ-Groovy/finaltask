@@ -18,8 +18,8 @@ function cart() {
     }
 };
 
-function createProductObject(item) {
-    var id = item.id,
+function createProductObject(obj) {
+    var id = obj.id,
         currentItem = catalog.filter(function (item) {
             if (item.id == id) {
                 return item

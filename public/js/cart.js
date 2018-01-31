@@ -1,5 +1,9 @@
 'use strict';
 
+// PARTIAL IMPLEMENTATION OF CART FUNCTIONALITY
+// DONT HAVE ENOUGH TIME TO FINISH CLEAR AND CONFIRM LISTENERS FUNCTIONALITY THOUGH LOGIC FOR THAT IS PREPARED IN bagInit() FUNCTION
+
+
 function bagInit() {
 
     var allProducts = [].slice.call(document.querySelectorAll('.cart_item')).map(function (item) {
@@ -8,7 +12,7 @@ function bagInit() {
     var currentState = {
         items: allProducts
     };
-
+    console.log(currentState.items);
     function countTotalValue() {
         var totalValue = currentState.items.reduce(function (prev, current) {
             var currentValue = current.price * current.quantity;
@@ -41,6 +45,9 @@ function bagInit() {
     };
 
     function removeItem(index) {
+        if (currentState.items[index].quantity == 0) {
+            return currentState
+        }
         currentState.items[index].quantity--;
         currentState.totalValue = countTotalValue();
         return currentState;
@@ -48,7 +55,7 @@ function bagInit() {
 
     function clearBag() {
         currentState.items = [];
-        currentState.totalValue
+        currentState.totalValue = 0;
         return currentState;
     };
     function confirm() {
@@ -56,33 +63,92 @@ function bagInit() {
         return currentState;
     };
 
+    function getTotal() {
+        return currentState.totalValue
+    }
+
+    function getItems() {
+        return currentState.items
+    }
+
+    function getQuanity() {
+        var totalQuantity = currentState.items.reduce(function (prev, current) {
+            return prev + current.quantity;
+        }, 0);
+
+        return totalQuantity
+    }
+
     return {
-        currentState: currentState,
         updateState: updateState,
-        total : currentState.totalValue
+        total: getTotal,
+        allItems: getItems,
+        quantity: getQuanity
     };
 };
 
 var bag = bagInit();
 
+function getItemById(id, array) {
+    var products = array;
+    var selected = products.filter(function (obj) {
+        if (obj.id == id) {
+            return obj
+        }
+    });
+    return selected[0];
+}
 
-// // LISTENERS
+function getIndex(id) {
+    var allItems = bag.allItems();
+    var selected = getItemById(id, allItems);
+    var index = allItems.indexOf(selected);
+    console.log(index);
+    return index;
+}
 
-// var headerTotal = document.querySelector('.price');
-// var footerTotal = document.querySelector('.total span');
-// var container = document.querySelector('.cart_items_section');
+function getQuantity(id) {
+    var quantity = getItemById(id, bag.allItems()).quantity;
+    return quantity
+}
 
-// container.addEventListener('click', function (e) {
-//     var item = e.target;
 
-//     if (item.tagName.toLowerCase() == 'button' && item.innerHTML == '+') {
-        
-//     }
-// });
+// LISTENERS
 
-bag.updateState('REMOVE_ITEM', 0);
-bag.updateState('REMOVE_ITEM', 1);
-bag.updateState('REMOVE_ITEM', 2);
-bag.updateState('REMOVE_ITEM', 3);
-console.log(bag.currentState); // {items: Array(4), totalValue: 0}
-console.log(bag.total); // 251.5
+var headerTotal = document.querySelector('.price');
+var footerTotal = document.querySelector('.total span');
+var totalQuantity = document.querySelector('.cart .value');
+var container = document.querySelector('.cart_items_section');
+
+function renderTotals() {
+    headerTotal.innerHTML = '£' + bag.total();
+    footerTotal.innerHTML = '£' + bag.total();
+    totalQuantity.innerHTML = bag.quantity();
+}
+
+container.addEventListener('click', function (e) {
+    var item = e.target;
+
+    if (item.tagName.toLowerCase() == 'button' && item.innerHTML == '+') {
+        var parent = item.closest('.cart_item');
+        var quantityContainer = parent.querySelector('.quantity .value');
+
+        var productId = parent.id;
+        var index = getIndex(productId);
+        bag.updateState('ADD_ITEM', index);
+        var quantity = getQuantity(productId);
+        quantityContainer.innerHTML = quantity;
+        renderTotals();
+
+    } else if (item.tagName.toLowerCase() == 'button' && item.innerHTML == '-') {
+        var parent = item.closest('.cart_item');
+        var quantityContainer = parent.querySelector('.quantity .value');
+
+        var productId = parent.id;
+        var index = getIndex(productId);
+        bag.updateState('REMOVE_ITEM', index);
+        var quantity = getQuantity(productId);
+        quantityContainer.innerHTML = quantity;
+        renderTotals();
+    }
+});
