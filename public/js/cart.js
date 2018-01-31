@@ -2,12 +2,22 @@
 
 function bagInit() {
 
-    var allProducts = [].slice.call(document.querySelectorAll('.cart_item')),
-        currentState = allProducts.map(function (item) {
-            return createProductObject(item)
-        });
+    var allProducts = [].slice.call(document.querySelectorAll('.cart_item')).map(function (item) {
+        return createProductObject(item)
+    });
+    var currentState = {
+        items: allProducts
+    };
 
-    var totalValue = countTotalValue();
+    function countTotalValue() {
+        var totalValue = currentState.items.reduce(function (prev, current) {
+            var currentValue = current.price * current.quantity;
+            return prev + currentValue;
+        }, 0);
+        return totalValue
+    }
+
+    currentState.totalValue = countTotalValue();
 
     function updateState(action, index) {
         var index = index;
@@ -25,44 +35,47 @@ function bagInit() {
     };
 
     function addItem(index) {
-        currentState[index].quantity++;
-        totalValue = countTotalValue();
+        currentState.items[index].quantity++;
+        currentState.totalValue;
         return currentState;
     };
 
     function removeItem(index) {
-        currentState[index].quantity--;
-        countTotalValue();
+        currentState.items[index].quantity--;
+        currentState.totalValue = countTotalValue();
         return currentState;
     };
 
     function clearBag() {
-        currentState = [];
-        countTotalValue();
+        currentState.items = [];
+        currentState.totalValue
         return currentState;
     };
     function confirm() {
-        currentState = [];
-        countTotalValue();
+        currentState.items = [];
         return currentState;
     };
 
-    function countTotalValue() {
-
-        totalValue = currentState.reduce(function (prev, current) {
-            var currentValue = current.price * current.quantity;
-            return prev + currentValue;
-        }, 0);
-
-        return totalValue
-    }
-
     return {
         currentState: currentState,
-        updateState: updateState,
-        totalValue: totalValue,
-        countTotalValue: countTotalValue
+        updateState: updateState
     };
 };
 
 var bag = bagInit();
+
+
+// LISTENERS
+
+var headerTotal = document.querySelector('.price');
+var footerTotal = document.querySelector('.total span');
+var container = document.querySelector('.cart_items_section');
+
+container.addEventListener('click', function (e) {
+    var item = e.target;
+
+    if (item.tagName.toLowerCase() == 'button' && item.innerHTML == '+') {
+        
+    }
+});
+
